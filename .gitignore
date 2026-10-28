@@ -1,0 +1,19 @@
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+.env
+
+# Streamlit runtime / credentials
+.streamlit/credentials.toml
+
+# OS artifacts
+.DS_Store
+Thumbs.db

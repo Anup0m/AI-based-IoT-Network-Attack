@@ -1,0 +1,50 @@
+{
+    "project_title": "AI-Based IoT Network Attack Detection",
+    "institution": "Unitedworld Institute of Technology, Karnavati University",
+    "course": "Computer Networks",
+    "faculty_guide": "Ms. Pragya Vats",
+    "random_seed": 42,
+    "train_test_split": "80/20 Stratified",
+    "dataset_source": "../data/iot_network_traffic.csv",
+    "total_samples": 10000,
+    "features_used": [
+        "Destination Port",
+        "Protocol",
+        "Flow Duration",
+        "Total Fwd Packets",
+        "Total Backward Packets",
+        "Total Length of Fwd Packets",
+        "Total Length of Bwd Packets",
+        "Fwd Packet Length Mean",
+        "Bwd Packet Length Mean",
+        "Flow Bytes/s",
+        "Flow Packets/s",
+        "Flow IAT Mean",
+        "SYN Flag Count",
+        "ACK Flag Count",
+        "RST Flag Count"
+    ],
+    "software_versions": {
+        "python": "3.14.0",
+        "scikit_learn": "1.7.2",
+        "pandas": "2.3.3",
+        "numpy": "2.3.3"
+    },
+    "model_hyperparameters": {
+        "baseline_decision_tree": {
+            "max_depth": 8
+        },
+        "primary_random_forest": {
+            "n_estimators": 100,
+            "max_depth": 15,
+            "class_weight": "balanced"
+        }
+    },
+    "measured_results_rf": {
+        "accuracy": 0.971,
+        "precision": 0.9671897289586305,
+        "recall": 0.9509116409537167,
+        "f1_score": 0.958981612446959,
+        "false_positive_rate": 0.017871017871017872
+    }
+}
